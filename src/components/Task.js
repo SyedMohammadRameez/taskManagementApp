@@ -6,7 +6,6 @@ import FilterListOutlinedIcon from "@mui/icons-material/FilterListOutlined";
 import AssignmentOutlinedIcon from "@mui/icons-material/AssignmentOutlined";
 import DeleteOutlineOutlinedIcon from "@mui/icons-material/DeleteOutlineOutlined";
 import EditNoteOutlinedIcon from "@mui/icons-material/EditNoteOutlined";
-import { Link } from "react-router-dom";
 import PopupTask from "./PopupTask";
 import { useSelector } from "react-redux";
 
@@ -99,7 +98,7 @@ function Task() {
           closePopup={() => setTaskPopup(false)}
           inputTitle={title}
           inputDate={date}
-          inputdDescription={description}
+          inputDescription={description}
         />
       )}
     </>
@@ -108,17 +107,17 @@ function Task() {
 
 export default Task;
 
-function TbodyTask({ id, title, date, updatePopup, setTaskPopup }) {
+function TbodyTask({ id, title, date, updatePopup, description, setTaskPopup }) {
   const handleEditTask = (e) => {
     setTaskPopup(true);
-    updatePopup({ title, date });
+    updatePopup({ title, date, description});
   };
 
   return (
     <tr>
       <td>{date}</td>
       <td>{title}</td>
-      <td>xyz@gmail.com</td>
+      <td>{description}</td>
       <td>
         <select
           style={{
