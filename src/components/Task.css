@@ -1,0 +1,62 @@
+.task_container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 15px 30px;
+}
+.task {
+  font-size: 30px;
+  font-weight: 500;
+  text-decoration: underline;
+}
+
+.right {
+  width: 45vw;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.right .search_task {
+  padding: 10px 5px;
+  border: 1px solid skyblue;
+  border-radius: 20px;
+  text-align: center;
+}
+.right .search_task::placeholder {
+  color: skyblue;
+  font-size: 16px;
+}
+
+.right .filter_task {
+  padding: 5px 11px;
+  border: 1px solid skyblue;
+  border-radius: 10px;
+}
+.right .sort_task {
+  padding: 4px 11px 8px;
+  border: 1px solid skyblue;
+  border-radius: 10px;
+}
+.right .add_task_btn {
+  background-color: skyblue;
+  color: white;
+  border: none;
+  border-radius: 2rem;
+  padding: 10px 16px;
+}
+
+.table_div table {
+  width: 100%;
+  text-align: left;
+  border-collapse: collapse;
+}
+.table_div table thead {
+  background-color: #d9eef7;
+  border-bottom: 2px solid skyblue;
+}
+.table_div table th,
+td {
+  padding-left: 32px;
+  line-height: 60px;
+}
